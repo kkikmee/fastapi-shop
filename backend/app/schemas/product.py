@@ -9,7 +9,7 @@ class ProductBase(BaseModel):
     description: Optional[str] = Field(None, description="Product description")
     price: float = Field(... , gt=0,
                          description="Product price")
-    category_id: id = Field(... , description="Category ID")
+    category_id: int = Field(... , description="Category ID")
     image_url: Optional[str] = Field(None, description="Product image URL")
     
 class ProductCreate(ProductBase):
