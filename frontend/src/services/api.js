@@ -100,12 +100,10 @@ export const cartAPI = {
    * Удалить товар из корзины
    */
   removeItem(productId, cartData) {
-    return apiClient.delete(`/cart/remove/${productId}`, {
-      data: {
-        cart: cartData,
-      },
-    })
-  },
+  return apiClient.delete(`/cart/remove/${productId}`, {
+    data: { cart: cartData },
+  })
+}
 }
 
 export default apiClient
